@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 
 import TaskList from '../../components/task-list/task-list';
 
-
-
 const HomePage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [tasks, setTasks] = useState([]);
@@ -44,8 +42,8 @@ const HomePage = () => {
   return (
       <div className="container-fluid">
         <div>
-          <Link to="/newTask">
-          <button className="btn btn-success mt-3" onClick={() => setIsLoading(true)}>Nova Tarefa</button>
+          <Link to="/create-task">
+            <button className="btn btn-success mt-3">Nova Tarefa</button>
           </Link>
           </div>
         <div className="row">

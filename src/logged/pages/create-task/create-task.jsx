@@ -1,9 +1,9 @@
-import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const newTask = () => {
+const CreateTaskPage = () => {
     const navigate = useNavigate()
-    const handleSubmited = (event) => {
+
+    const onSubmit = (event) => {
         event.preventDefault()
         navigate('/')
     }
@@ -11,11 +11,8 @@ const newTask = () => {
     return (
 
         <div  className='p-4'>
- 
             <h1>Nova Tarefa</h1>
-
-            <form onSubmit={handleSubmited}>
-
+            <form onSubmit={onSubmit}>
                 <div className="form-group p-2">
                     <label htmlFor="title">Título</label>
                     <input type="text" className="form-control" id="title" placeholder='Colher trigo...' required />
@@ -29,10 +26,9 @@ const newTask = () => {
 
                     <button className="btn btn-danger  " onClick={() => navigate('/')}>Voltar</button>
                 </div>
-
             </form>
         </div>
     )
 }
 
-export default newTask
+export default CreateTaskPage;
