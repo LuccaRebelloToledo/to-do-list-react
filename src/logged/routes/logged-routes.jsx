@@ -23,7 +23,7 @@ const routes = [
   {
     element: <CreateTaskPage />,
     path: '/create-task',
-  }
+  },
 ];
 
 const LoggedRoutes = () => {
