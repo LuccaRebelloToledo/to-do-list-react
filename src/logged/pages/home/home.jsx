@@ -39,7 +39,7 @@ const HomePage = () => {
   }
 
   return (
-      <div className="container d-flex justify-content-center">
+      <div className="container-fluid">
         <div className="row">
           <TaskList tasks={tasks.filter((task) => task.status === 'pending')} title={'A Fazer'} color={'#007BFF'}  onTaskListClick={openRegistrationScreen} />
 

@@ -6,7 +6,7 @@ import Footer from '../footer/footer';
 
 const PageScaffold = () => {
   return (
-    <div>
+    <div className='vh-100'>
       <Header />
         <Content>
           <Outlet />

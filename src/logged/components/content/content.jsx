@@ -2,11 +2,9 @@ import PropTypes from 'prop-types'
 
 const Content = ({children}) => {
   return (
-    <div>
-      <main className='container-lg m-4'>
+      <main className='p-4'>
         {children}
       </main>
-    </div>
   )
 }
 
