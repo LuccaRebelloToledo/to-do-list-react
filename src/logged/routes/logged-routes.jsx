@@ -9,6 +9,8 @@ import PageScaffold from '../components/page-scaffold/page-scaffold';
 
 import HomePage from '../pages/home/home';
 
+import Task from '../pages/tasks/newTask';
+
 const routes = [
   {
     element: <Navigate to="/" />,
@@ -18,6 +20,10 @@ const routes = [
     element: <HomePage />,
     path: '/',
   },
+  {
+    element: <Task />,
+    path: '/newTask',
+  }
 ];
 
 const LoggedRoutes = () => {
