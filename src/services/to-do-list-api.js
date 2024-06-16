@@ -25,6 +25,12 @@ export const put = async (path, payload, ...config) => {
   return { data };
 };
 
+export const patch = async (path, payload, ...config) => {
+  const { data } = await TO_DO_LIST_API.patch(path, payload, { config });
+
+  return { data };
+};
+
 export const remove = async (path, ...config) => {
   const { data } = await TO_DO_LIST_API.delete(path, { config });
 
