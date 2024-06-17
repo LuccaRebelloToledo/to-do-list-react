@@ -1,16 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "5c10",
-      "title": "Testing ",
-      "description": "Testing",
-      "status": "pending"
-    },
-    {
-      "id": "dbba",
-      "title": "teste",
-      "description": "teste",
-      "status": "doing"
-    }
-  ]
+  "tasks": []
 }

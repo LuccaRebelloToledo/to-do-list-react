@@ -9,7 +9,7 @@ const Error = ({children}) => {
 }
 
 Error.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.string,
 }
 
 export default Error;

@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 import PropTypes from 'prop-types';
 
 import Task from '../task/task';
@@ -5,9 +7,11 @@ import TaskListStyles from './task-list.module.css';
 
 import { Draggable } from '@hello-pangea/dnd';
 
-const TaskList = ({ tasks, title, color }) => {
+const TaskList = forwardRef(function taskList(props, ref) {
+  const { droppableProps, placeholder, title, color, tasks } = props;
+
   return (
-    <div className="col-md-4">
+    <div className="col-md-4" ref={ref} {...droppableProps}>
       <h2
         className="text-center my-3 p-3"
         style={{
@@ -37,11 +41,12 @@ const TaskList = ({ tasks, title, color }) => {
               )}
             </Draggable>
           ))}
+          {placeholder}
         </div>
       </div>
     </div>
   );
-};
+});
 
 TaskList.propTypes = {
   tasks: PropTypes.arrayOf(
@@ -53,6 +58,8 @@ TaskList.propTypes = {
   ).isRequired,
   title: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
+  droppableProps: PropTypes.any.isRequired,
+  placeholder: PropTypes.any.isRequired,
 };
 
 export default TaskList;

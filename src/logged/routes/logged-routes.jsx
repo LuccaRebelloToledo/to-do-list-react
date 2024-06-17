@@ -9,7 +9,7 @@ import PageScaffold from '../components/page-scaffold/page-scaffold';
 
 import HomePage from '../pages/home/home';
 
-import CreateTaskPage from '../pages/create-task/create-task';
+import TaskPage from '../pages/task/task';
 
 const routes = [
   {
@@ -21,8 +21,12 @@ const routes = [
     path: '/',
   },
   {
-    element: <CreateTaskPage />,
-    path: '/create-task',
+    element: <TaskPage />,
+    path: '/task',
+  },
+  {
+    element: <TaskPage />,
+    path: '/task/:id',
   },
 ];
 
